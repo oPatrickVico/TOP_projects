@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+    <meta charset="UTF-8" />
+    <title>Odin Recipes</title>
+    <style>
+      .dumb-explanation:focus::after,
+      .dumb-explanation:hover::after {
+        content: ' is a test for a11y stuff';
+        position: absolute;
+        transform-origin: 0 0;
+        transform: translate(-8ch, 1em);
+        background-color: white;
+        color: purple;
+      }
+      .dumb-explanation:hover {
+        background-color: white;
+        color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="./img/background_1920.jpg" alt="kitchen" aria-hidden="true" class="whole-page" />
+    <div class="whole-page purple-layer"></div>
+    <div class="main-page">
+      <h1>Let's Cook!</h1>
+      <img src="./img/kitchen-top.jpg" alt=""/>
+      <h2>List of Recipes:</h2>
+      <ul>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus alias
+          voluptatum distinctio qui
+          <span class="dumb-explanation" tabindex="0">silly test</span>
+          reiciendis, tempora nihil iusto, illum eum magnam voluptas laboriosam
+          aliquid repudiandae temporibus quisquam, pariatur animi voluptatem
+          eligendi?
+        </p>
+        <li><a href="./recipes/cookies.html">Cookies</a></li>
+        <li><a href="./recipes/lemonpie.html">Lemon Pie</a></li>
+        <li><a href="./recipes/pepperonibread.html">Pepperoni Bread</a></li>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos odio
+          quas sed impedit dignissimos nostrum optio non asperiores adipisci!
+          Alias, veritatis ab. Impedit beatae, sunt tempore quas repellendus eum
+          ea?
+        </p>
+      </ul>
+    </div>
+  </body>
+</html>

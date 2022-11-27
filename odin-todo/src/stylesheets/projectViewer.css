@@ -1,0 +1,38 @@
+.pjview-container {
+  width: 95%;
+  height: 95%;
+  margin: 2.5% auto;
+  position: relative;
+}
+
+.pjview-title {
+  color: white;
+  margin: 20px;
+  font-size: 32px;
+}
+
+.pjview-bucket {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+.pjview-addBtn {
+  font-size: 58px;
+  font-family: monospace;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 50px;
+  border: 2px solid rgb(51, 51, 51);
+  background-color: rgb(80, 80, 80);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  z-index: 10;
+}

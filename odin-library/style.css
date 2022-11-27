@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 20px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.library {
+    flex: 1;
+    max-width: 90vw;
+    margin: 5vh auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+    grid-auto-rows: 200px;
+    gap: 10px;
+}
+
+.book {
+    position: relative;
+    background-color: rgb(202, 202, 202);
+    box-shadow: 0 0 8px 0 rgba(0,0,0,.5);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    padding-left: 10px;
+}
+
+.book .thumbnail {
+    box-sizing: content-box;
+    --scale: 18px;
+    width: calc(5 * var(--scale));
+    height: calc(7 * var(--scale));
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.2);
+}
+
+.bookInfo .hasReadButton {
+    width: 10ch;
+    height: 1.2rem;
+    border-style: none;
+    background-color: rgb(145, 233, 145);
+}
+
+.hasReadButton.unread {
+    background-color: rgb(217, 233, 145);
+}
+
+.bookInfo .deleteButton {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgb(180, 179, 179);
+    border: 1px solid;
+    --size: 1.2rem;
+    font-size: var(--size);
+    height: calc(var(--size) + 5px);
+    width: calc(var(--size) + 5px);
+    border-radius: 50%;
+}
+
+button.addBook {
+    position: fixed;
+    top: 90%;
+    right: 10%;
+    height: 42px;
+    width: 10ch;
+    z-index: 10;
+}
+
+.addBookModal {
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background-color: rgb(231, 224, 214);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.addBookModal input {
+    margin-bottom: 20px;
+}
+
+input#hasReadInput {
+    margin-right: 10px;
+}
+
+button#submitBookButton {
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+}
+
+button.closeModal {
+    border-style: none;
+    width: fit-content;
+    background-color: inherit;
+    align-self: flex-end;
+}
+
+.deleteModal {
+    position: fixed;
+    top: 35vh;
+    left: 15vw;
+    z-index: 10;
+    width: min(70vw, 300px);
+    height: min(30vh, 200px);
+    background-color: rgb(231, 224, 214);
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    gap: 10px;
+}

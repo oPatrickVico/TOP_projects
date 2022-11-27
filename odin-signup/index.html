@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/meyersreset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./scripts/script.js" defer></script>
+</head>
+<body>
+    <img src="./images/jonathan-ansel-moy-de-vitry-fN_hPB1Vaek-unsplash.jpg" alt="A lighthouse on a hill" class="background-image">
+    <div class="transparent-card">
+        <div class="hero-intro">
+            <h1 class="hero-title">Some Text Here</h1>
+            <p class="hero-description">
+                Some extra text, taking about the things
+                and stuff, reaaally padding the space. But
+                three lines should suffice.
+            </p>
+        </div>
+        <div class="modal-container">
+            <div class="tabs">
+                <button class="tab tab-active">Sign up</button>
+                <button class="tab tab-inactive">Sign in</button>
+            </div>
+            <form class="user-data" id="sign-in">
+
+                <fieldset class="input-container">
+                    <label class="text-label" for="user-name">
+                        &nbsp;User Name&nbsp;
+                    </label>
+                    <input class="text-field" 
+                            id="user-name"
+                            type="text"
+                            minlength="6"
+                            maxlength="15"
+                            required>
+                </fieldset>
+
+                <fieldset class="input-container">
+                    <label class="text-label" for="email">
+                        &nbsp;E-mail&nbsp;
+                    </label>
+                    <input  class="text-field" 
+                            type="email" 
+                            id="email"
+                            required>
+                </fieldset>
+
+                <fieldset class="input-container">
+                    <label for="password" class="text-label">
+                        &nbsp;Password&nbsp;
+                    </label>
+                    <input  class="text-field" 
+                            type="password" 
+                            id="password"
+                            pattern="^[a-zA-Z0-9]{6,}$"
+                            required>
+                </fieldset>
+
+                <fieldset class="input-container">
+                    <label class="text-label" for="password-confirmation">
+                        &nbsp;Confirm Password&nbsp;
+                    </label>
+                    <input  class="text-field" 
+                            type="password" 
+                            id="password-confirmation"
+                            required>
+                </fieldset>
+
+                <button type="submit" class="form-submit">GET STARTED</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

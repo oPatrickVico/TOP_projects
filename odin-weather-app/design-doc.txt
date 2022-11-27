@@ -1,0 +1,33 @@
+Fuck cute layouts
+Just read some basic info
+Display the infor and gtfo
+do not even create elements with js, because fuck that
+
+
+function isPrime(num) {
+    for ( var i = 2; i < num; i++ ) {
+        if ( num % i === 0 ) {
+            return false;
+        }
+    }
+    return true;
+}
+
+function * primeGenerator (start = 2) {
+  while (true) {
+      if (isPrime(start)) yield start++
+  }
+}
+
+
+aggregator = {
+  2:0,
+  3:0,
+  ...
+  n:0
+}
+currentA
+currentB
+primeOutputter
+
+pairDivisibleBy([a, b], c)

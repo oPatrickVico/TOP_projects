@@ -1,0 +1,204 @@
+:root {
+    --gridEdge: 0;
+    --light-silver: rgb(216, 216, 216);
+    --graphite: rgb(73, 73, 73);
+    --dark-graphite: rgb(39, 39, 39);
+    --light-blue: rgb(133, 192, 202);
+    --light-green: rgb(125, 192, 128);
+    --ligth-red: rgb(224, 46, 46);
+}
+
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 28px;
+}
+
+#appRoot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--graphite);
+}
+
+.board-container{
+    position: fixed;
+    top: 60vw;
+    left: 15vw;
+    width: 70vw;
+    height: 70vw;
+    z-index: 0;
+    background-color: seagreen;
+    display: grid;
+    grid-template-columns: repeat(var(--gridEdge), 1fr);
+}
+
+.modals {
+    position: fixed;
+    top: 70vw;
+    left: 25vw;
+    width: 50vw;
+    height: 50vw;
+    padding: 15px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: sandybrown;
+    gap: 10px;
+}
+
+.backButton {
+    position: absolute;
+    top: 5px;
+    right: 4px;
+    display: flex;
+    align-items: center;
+    height: .7rem;
+    padding-bottom: .3rem;
+}
+
+.quitButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.clearButton {
+    position: absolute;
+    top: 45px;
+    right: 10px;
+}
+
+/* Title Screen */
+
+.titlescreen {
+    color: var(--light-silver);
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40%;
+}
+
+.super-text {
+    margin-bottom: 30px;
+    font-size: 80px;
+    font-weight: bolder;
+    color: rgb(204, 3, 154);
+    text-shadow: -2px 2px 2px rgb(255, 141, 35);
+}
+
+.tic-text,
+.tac-text,
+.toe-text {
+    text-shadow: -4px 4px 2px black;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.tic-text {
+    align-self: flex-start;
+    margin-left: 30%;
+    color: var(--light-blue);
+}
+
+.tac-text {
+    color: var(--ligth-red);
+}
+
+.toe-text {
+    align-self: flex-end;
+    margin-right: 30%;
+    color: var(--light-green);
+}
+
+.newGameButton {
+    background-color: var(--light-silver);
+    border-style: none;
+    padding: 15px;
+    margin-top: 60px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+/* playerNumberSelect Modal */
+
+.playerNumberSelect {
+    /* border: 1px solid white; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.onePlayerSelect,
+.twoPlayersSelect {
+    padding: 10px;
+    width: 70vw;
+    border: 3px solid white;
+    border-radius: 15px;
+    font-size: 36px;
+    font-weight: bolder;
+    color: var(--dark-graphite);
+}
+
+.onePlayerSelect {
+    background-color: var(--light-blue);
+}
+
+.twoPlayersSelect {
+    background-color: var(--ligth-red);
+}
+
+/* pickSymbolAndColor Modal */
+
+.symbol-n-color {
+    border: 3px solid white;
+    border-radius: 25px;
+    height: 60vh;
+    width: 80vw;
+    margin: 40% auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    gap: 50px;
+}
+
+.symbol-n-color .head-title {
+    font-weight: bolder;
+    font-size: 48px;
+}
+
+.symbol-n-color .radio-field {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.radio-field .subtitle {
+    display: block;
+    width: 100%;
+    flex: 1 0 auto;
+    text-align: center;
+}
+
+.radio-field [type="radio"] {
+    visibility: hidden;
+}
+
+.radio-field label:focus-within {
+    border: 5px solid white;
+}

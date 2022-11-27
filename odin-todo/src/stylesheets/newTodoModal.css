@@ -1,0 +1,43 @@
+.ntm-container {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background-color: rgb(82, 82, 82);
+  border: 2px solid rgb(40, 40, 40);
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 50px;
+}
+
+.ntm-description,
+.ntm-date,
+.ntm-title {
+  background-color: rgb(40, 40, 40);
+  color: white;
+  border-style: none;
+  padding: 3px;
+  font-size: 22px;
+  height: 1.2em;
+}
+
+.ntm-title::placeholder,
+.ntm-description::placeholder,
+.ntm-date::placeholder {
+  color: rgb(204, 204, 204);
+}
+
+.ntm-btnContainer {
+  align-self: flex-end;
+}
+
+.ntm-save {
+}
+
+.ntm-cancel {
+}

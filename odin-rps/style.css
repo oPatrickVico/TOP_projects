@@ -1,0 +1,7 @@
+* {
+    margin: 5px;
+}
+
+.current-score {
+    display: inline-block;
+}

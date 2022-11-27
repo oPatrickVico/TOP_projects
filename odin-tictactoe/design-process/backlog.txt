@@ -1,0 +1,42 @@
+Implementation details:
+
+    HTML-DOM:
+
+        • Get player profile modal (symbol and color ONLY);
+
+
+    UI\Cosmetics that I procrastinate on
+
+        • Change color of symbols
+
+    CSS:
+
+        • Find decent symbols to use in the game, that are svg
+        • Figure out how to change the color of embeded svg
+        • Pick good fonts
+        • Set the three color schemes:
+            • Dark and light brown, Dark and Light green, Silver;
+            • Navy blue, Yellow and silver;
+            • Graphite, yellow, pink and silver;
+            • Graphite, yellow, pink, blue
+            • Shades of gray — Lighter graphite and darker silver (instead of white) with shados in letters
+        • Makke the tic-tac-toe letters animate
+        • Use a 5x5 grid to add some X's and O's
+        • Which symbols should I add to the game?
+
+
+Features that could be cool:
+
+    • Each person can customize their symbol and color
+    • The game has different color schemes
+    • Maybe putting a three people mode?
+    • Add cards\special resources to spice the gameplay up?
+    • Add inteligence to the AiFactory
+
+    Refactoring
+    • Improve the whole modals and screens stack navigation thing buzzword
+    
+    Javascipt — Pure-Functions Branch:
+
+        • Maybe decopuple all functions from player object, leaving it only with data (name, score, symbol, color, etc)
+        • make hasVictory its own function, with all extra functions internal to it

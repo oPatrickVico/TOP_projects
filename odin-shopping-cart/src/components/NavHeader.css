@@ -1,0 +1,49 @@
+.NavHeader {
+  flex: 0 0 auto;
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: hsl(300, 100%, 3%);
+}
+
+.NavHeader a {
+  font-family: 'Inter';
+  color: white;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.logo-name {
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.link-tree {
+  height: 100%;
+  margin-right: 80px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.link-tree .nav-link {
+  height: 100%;
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link-tree .nav-link:hover {
+  background-color: white;
+  color: hsl(300, 100%, 3%);
+}
+
+.cart-logo {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}

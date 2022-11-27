@@ -1,0 +1,24 @@
+{
+  "name": "odin-tictactoe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/al-ptk/odin-tictactoe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/al-ptk/odin-tictactoe/issues"
+  },
+  "homepage": "https://github.com/al-ptk/odin-tictactoe#readme",
+  "devDependencies": {
+    "eslint": "^8.17.0",
+    "prettier": "^2.6.2"
+  }
+}

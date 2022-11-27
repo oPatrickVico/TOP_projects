@@ -1,0 +1,58 @@
+/*
+    Background must be a image with puple-ish transparent layer
+    The main content must have a more opaque, purple background, plain (no images or texture) and with a justify-text left. Plus, it must have a width of 33%. There should be borders with a darker purple and a width of 3px-ish only vertical (no top or bottom borders).
+    A media query for phones where the main div takes the whole page and the text is justified with justify.
+    The fonts must be white, unless specified otherwise. 
+*/
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* body {} */
+
+.whole-page {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.purple-layer {
+    background-color: rgba(60, 0, 60,0.5);
+    z-index: -1;
+}
+
+body>img{
+    z-index: -2;
+}
+
+
+.main-page{
+    position: relative;
+    background-color: rgba(71, 44, 122, 0.8);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+
+    width: 800px;
+    min-height: 100vh;
+    margin: 0px 20px;
+    padding: 20px 50px;
+    gap: 10px;
+
+    border-left: 3px solid rgba(60, 0, 60,0.5);
+    border-right: 3px solid rgba(60, 0, 60,0.5);
+}
+
+.main-page * {
+    color: azure;
+}
+
+.main-page>img {
+    border: 3px solid rgba(60, 0, 60,0.5); 
+    max-width: 80%;
+    max-height: 600px;
+}

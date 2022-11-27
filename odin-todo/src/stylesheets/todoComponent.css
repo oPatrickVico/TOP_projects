@@ -1,0 +1,25 @@
+.todo-container {
+  width: 90%;
+  height: fit-content;
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 1);
+  display: flex;
+  align-items: center;
+}
+
+.todo-checkbox {
+  width: 32px;
+  height: 32px;
+  margin: 10px;
+  border-radius: 50px;
+  border: 2px solid rgba(102, 109, 128, 0.6);
+}
+
+.todo-data {
+  background-color: white;
+  padding: 10px;
+  flex: 1 1 auto;
+}
+
+.todo-title {
+  margin-bottom: 5px;
+}

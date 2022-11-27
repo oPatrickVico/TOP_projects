@@ -1,0 +1,59 @@
+Render titlescreen 
+
+function newMatch()
+    ask player number (modal)
+    ask grid size (modal)
+    create grid (new screen)
+
+    while true:
+        player1.makeMove()
+        [IsGameOver, result] = checkForGameOver()
+        if (IsGameOver) break;
+        player2.makeMove();
+        [IsGameOver, result] = checkForGameOver()
+        if (IsGameOver) break;
+    
+    announce result
+    update score
+
+// The logic below shall
+//  make more sense in code
+
+ask if play again (modal)
+?  {
+    player1.newMatch();
+    player2.newMatch();
+    newMatch () (new screen)
+}
+: {
+    destroy players
+    render titlescreen () (new screen)
+}
+
+
+//  New game?
+//      Number of human players
+//      Get symbol, color and name for each human player
+//      Grid size
+//      Generate grid
+//      Start gameLoop
+//      If gameOver
+//          If Rematch
+//              updateScore
+//              clear board
+//          Else
+//              title screen
+
+// function gameLoop (players,board) {
+//     let gameOver = false;
+//     while (!gameOver) {
+//         for (const player of players) {
+//             player.getValidInput(board.getEmptySpaces());
+//             gameOver = player.hasVictory();
+//             if (gameOver) {
+//                 player.incrementScore();
+//                 board.clearBoard();
+//             }
+//         }
+//     }
+// }

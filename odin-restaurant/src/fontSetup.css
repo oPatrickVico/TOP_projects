@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Sail&display=swap');
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./JetBrainsMono-Medium.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+.sail {
+  font-family: 'Sail', cursive;
+}
+
+.jetbrains {
+  font-family: 'JetBrains Mono', monospace;
+  color: black;
+}

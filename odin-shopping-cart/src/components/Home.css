@@ -1,0 +1,90 @@
+.Home {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.purple-background {
+  position: absolute;
+  z-index: -1;
+  height: 190px;
+  width: 100%;
+  background-color: hsl(281, 40%, 50%);
+}
+
+.hero-intro {
+  padding: 50px;
+  display: flex;
+  gap: 40px;
+}
+
+.hero-title {
+  margin-top: 80px;
+  font-family: Inter;
+  font-weight: 800;
+  font-size: 48px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-title > .top-text {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 50px;
+}
+
+.hero-title > .bottom-text {
+  color: hsl(281, 40%, 50%);
+}
+
+.hero-description {
+  margin-top: 50px;
+  width: 15ch;
+  font-family: Inter;
+  font-size: 26px;
+}
+
+.shop-button {
+  display: block;
+  text-decoration: none;
+  color: white;
+  background-color: hsl(281, 40%, 50%);
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 26px;
+  padding: 15px 40px;
+  margin: 20px auto;
+}
+
+.product-display {
+  display: flex;
+  gap: 50px;
+  padding: 50px;
+}
+
+.display-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3em;
+  background-color: hsl(300, 100%, 3%);
+  color: white;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer a:hover {
+  color: hsl(281, 40%, 50%);
+}

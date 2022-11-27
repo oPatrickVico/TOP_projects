@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 10px;
+    --gridSize: 50rem;
+    --edgeSize: 5;
+}
+
+button {
+    width: 10rem;
+    margin: 1rem;
+}
+
+body {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.grid-container {
+    margin: 2rem;
+    max-width: var(--gridSize);
+    height: var(--gridSize);
+    display: grid;
+    grid-template-columns: repeat(var(--edgeSize), 1fr);
+    grid-template-rows: repeat(var(--edgeSize), 1fr);
+
+    border: .5rem solid;
+    
+}
+
+.cell {
+    background: ;
+}

@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 10px;
+    font-family: sans-serif;
+    --baby-blue: #dae3f0;
+}
+
+div#root {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    height: 100vh;
+}
+
+/* -----------------------   Sidebar Menu ------------------- */
+
+nav.sidebarMenu {
+    background-color: rgb(52, 176, 248);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 10px;
+    --li-font-size: 1.8rem;
+}
+
+nav.sidebarMenu a {
+    text-decoration: none;
+    color: white;
+    font-size: var(--li-font-size);
+    font-weight: bold;
+}
+
+nav.sidebarMenu svg.menuIcon{
+    width: var(--li-font-size);
+    height: var(--li-font-size);
+}
+
+nav.sidebarMenu a#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+nav.sidebarMenu a#logo svg.logo-icon {
+    width: 48px;
+    height: 48px;
+}
+nav.sidebarMenu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    list-style-type: none;
+}
+
+/* --------------------  DASHBOARD ------------------ */
+
+.main-content {
+    background-color: var(--baby-blue);
+    --spacing: 10px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto 3fr 3fr;
+    gap: var(--spacing);
+    padding: 0 var(--spacing);
+}
+
+div.main-content>header {
+    height: fit-content;
+    margin: 0 -10px;
+    background-color: white;
+    box-shadow: 1px 0 1px 0;
+    grid-column: 1 / 3;
+}
+
+div.header-section {
+    --font-size: 1.7rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 10px;
+}
+
+div.header-section .hs2 {
+    justify-content: center;
+    align-items: space-between;
+}
+
+.header-section svg.dashboard-icons {
+    width: var(--font-size);
+    height: var(--font-size);
+}
+
+#search-button,
+#notifications {
+    border-radius: 50%;
+    border-style: none;
+}
+
+#search-bar {
+    border-style: none;
+    font-size: var(--font-size);
+    padding: .65rem 1rem;
+    flex: 1;
+    max-width: 70%;
+    background-color: var(--baby-blue);
+    border-radius: 25px;
+}
+
+#user-account {
+    border-radius: 25px;
+    border-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+img.user-pfp {
+    border-radius: 25px;;
+}
+
+.user-greeting {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.user-credentials {
+    position: relative;
+    font-weight: bold;
+    font-size: 1.7rem;
+    flex: 1;
+    max-width: 350px;
+}
+
+.user-credentials::before {
+    content: 'Hi there,';
+    font-size: 1.3rem;
+    position: absolute;
+    bottom: 2rem;
+}
+
+ul.manager-actions{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex: 1;
+}
+
+button.managing-action {
+    background-color: #1992D4;
+    color: white;
+    border-style: none;
+    border-radius: 25px;
+    padding: 10px;
+    width: 8rem;
+}
+
+/* -------- Main Grid Sections --------- */
+
+.grid-container {
+    margin: 10px 0;
+}
+
+.grid-item {
+    margin: 5px;
+    background-color: white;
+}
+
+/* ----- Projects ----- */
+
+div.projects {
+    grid-row: 2/4;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    grid-auto-rows: 300px;
+    gap: 20px;
+}
+
+.projects .grid-item {
+    flex: 1 0 auto;
+    border-left: 7px solid rgb(224, 148, 6);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 25px;
+    font-size: 1.3rem;
+}
+
+.projects .grid-item .description {
+    height: 80%;
+}
+
+.projects .grid-item .view-actions {
+    align-self: flex-end;
+}
+
+/* ----- Announcements ----- */
+
+div.announcements {
+    grid-column: 2/3;
+}
+
+.announcements .grid-item {
+    padding: 20px;
+    margin: 5px;
+}
+
+.announcements h3 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+/* ----- Trending ----- */
+
+div.trending {
+    grid-column: 2/3;
+}
+
+.trending .grid-item {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    height: 64px;
+    margin: 0 10px;
+}
+
+.trending .random-pfp {
+    border-radius: 25px;
+}
+
+.trending .user-tweet {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.user-tweet .user-at {
+    font-weight: bold;
+}
+
+.user-tweet .user-at::before {
+    content:'@';
+    font-weight: bold;
+}
