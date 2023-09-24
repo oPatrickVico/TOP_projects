@@ -2,15 +2,11 @@ const chainLen = 3;
 const gridEdge = 3;
 
 function isConnected(chainA, chainB) {
-  let result = false;
-  for (const element of chainA) {
-    result |= chainB.includes(element);
-  }
-  return result;
+  return chainA.reduce((result, element) => result |= chainB.includes(element), false);
 }
 
 function extendChain(extended, extensor) {
-  let result = [...extended];
+  let result = extended.slice();
   for (let element of extensor) {
     if (!extended.includes(element)) {
       result.push(element);
@@ -21,9 +17,9 @@ function extendChain(extended, extensor) {
 
 function isValidChain(chain) {
   return (
-    isHorizontalLine(chain) ||
-    isVerticalLine(chain) ||
-    isBackslashLine(chain) ||
+    isHorizontalLine(chain)    ||
+    isVerticalLine(chain)      ||
+    isBackslashLine(chain)     ||
     isForwardslashLine(chain)
   );
 }
@@ -98,34 +94,7 @@ function isNeighbour(a, b) {
   );
 }
 
-function isConnected(chainA, chainB) {
-  let result = false;
-  for (const element of chainA) {
-    result |= chainB.includes(element);
-  }
-  return result;
-}
-
-function extendChain(extended, extensor) {
-  let result = [...extended];
-  for (let element of extensor) {
-    if (!extended.includes(element)) {
-      result.push(element);
-    }
-  }
-  return result.sort((a, b) => a - b);
-}
-
-function isValidChain(chain) {
-  return (
-    isHorizontalLine(chain) ||
-    isVerticalLine(chain) ||
-    isBackslashLine(chain) ||
-    isForwardslashLine(chain)
-  );
-}
-
-function somethingCool(tempLinks, currentLink = undefined) {
+function checkForVictory(tempLinks, currentLink = undefined) {
   while (tempLinks.length > chainLen - 2) {
     currentLink = tempLinks.pop();
     for (let i = 0; i < tempLinks.length; i++) {
@@ -135,13 +104,14 @@ function somethingCool(tempLinks, currentLink = undefined) {
       if (isValidChain(currentChain) && chainLen === 3) return true;
     }
   }
+  return false;
 }
 
 function hasVictory(links) {
   if (links.length < chainLen - 1) return false;
   const tempLinks = [...links];
 
-  return somethingCool(tempLinks);
+  return checkForVictory(tempLinks);
 }
 
 const result = hasVictory(
